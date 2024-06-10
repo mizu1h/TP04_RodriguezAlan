@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <title th:text="${title}">Tp04_RodriguezAlan</title>
+</head>
+<body>
+<header data-th-replace="~{fragments/header :: header}"></header>
+<div class="d-flex">
+		<main class="bg-body-tertiary col-md-8 p-2">
+		<div id="noticias">
+                    <h4>Noticias</h4>
+                    <div class="d-flex">
+                        <img class="p-2" src="images/fijado.png" style="width: 5%; height: auto;">
+                    	<a class="btn btn-outline-black d-flex p-2 fw-bolder" href="https://www.fi.unju.edu.ar/noticias-generales/4595-primera-promocion-de-tecnicos-quimicos-de-la-etp-n2-visitara-la-facultad-de-ingenieria.html">04 JUNIO 2024: Primera Promoción de Técnicos Químicos de la ETP N° 2 visitará la Facultad de Ingeniería de la UNJu</a>
+                    </div>
+                </div>
+                <div id="inicio">
+                    <h1>Facultad de Ingeniería</h1>
+                    <br>
+                    <p class="fw-medium">La Universidad nace el 25 de mayo de 1972 como universidad provincial y al año siguiente se transforma en Universidad Nacional. Comienza a funcionar sobre la base de cuatro carreras: Ingeniería Agronómica, Ingeniería de Minas, Ingeniería Metalúrgica e Ingeniería Química. Su propósito fue apuntalar las actividades de explotación e industrialización de los recursos naturales de Jujuy. Las tres últimas carreras mencionadas pasan a constituir la actual Facultad de Ingeniería que, con el transcurso de los años, sumó a ellas un número importante de otras carreras.
+					Las políticas de la Universidad Nacional de Jujuy, y especialmente de la Facultad de Ingeniería, tienden a ampliar el área de influencia y a fortalecer su acción institucional, en respuesta a la demanda social creciente de formación de recursos humanos que contribuyan al desarrollo científico, tecnológico y cultural.</p>
+                    <p class="fw-medium">De esta forma, la Facultad se constituyó en vector de desarrollo de la provincia, por cuanto:</p>
+                    <ul class="list-group">
+                        <li class="bg-primary-subtle list-group-item" >Posibilita acceder a títulos universitarios a jóvenes 
+                        cuya situación económica les impide estudiar fuera de la provincia.</li>
+                        <li class="bg-primary-subtle list-group-item">Provee de profesionales de la Ingeniería a las industrias radicadas en la provincia 
+                        y de profesionales competentes a las diversas reparticiones del estado provincial</li>
+                        <li class="bg-primary-subtle list-group-item">Incorpora a la sociedad profesionales aptos para generar emprendimientos de distinta índole</li>
+                    </ul>
+                    <br>
+                </div>
+                <p class="fw-medium">En la actualidad, las particularidades geopolíticas del área de influencia de la Facultad le otorgan una importante proyección internacional; proyección nacida tanto por el impacto regional producido por la globalización y en particular por los acuerdos suscriptos por nuestro país en el marco del Mercosur, como por la habilitación de nuevos pasos fronterizos en la provincia los cuales la integran regionalmente mediante el corredor bioceánico. Esta realidad permite que Jujuy pase de ser una provincia muy alejada de los puertos argentinos a otra que está sobre la línea de unión entre los puertos comerciales del norte de Chile con los de Brasil. Por ende, de disponer como única salida comercial el puerto de Buenos Aires a 1700 km, ahora está a tan sólo 700 km del de Antofagasta (Chile). Todo ello constituye a la vez una oportunidad y un desafío para la economía regional, y en consecuencia para la Facultad.</p>
+                <div id="carreras">
+                    <h2>Carreras</h2>
+                    <br>
+                    <h3>Carreras de grado:</h3>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="bg-primary-subtle list-group-item">Ingeniería Química</li>
+                        <li class="bg-primary-subtle list-group-item">Ingeniería de Minas</li>
+                        <li class="bg-primary-subtle list-group-item">Ingeniería Informática</li>
+                    </ul>
+                    <br>
+                    <h3>Carreras de pregrado:</h3>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="bg-primary-subtle list-group-item flex-fill">Analista Programador Universitario</li>
+                        <li class="bg-primary-subtle list-group-item flex-fill">Tecnicatura Universitaria en Diseño Integral de Videojuegos</li>
+                        <li class="bg-primary-subtle list-group-item flex-fill">Tecnicatura Universitaria en Perforaciones</li>
+                    </ul>
+                    <br>
+                    <a class="btn btn-outline-info d-flex p-2 justify-content-center fw-bolder" role="button" href="https://www.fi.unju.edu.ar">Más Información</a>
+                </div>
+            </main>
+		<aside class="col-md-6 p-2">
+                <div class="p-2 bg-primary-subtle text-primary-emphasis">
+                <h2>Complementos</h2>
+                    <br>
+                    <div>
+                        <a class="p-2" href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank">
+                            <img src="images/biblioteca.jpg" style="width: 25%; height: auto;">
+                        </a>
+                        <a class="p-2" href="https://www.fi.unju.edu.ar/siu-guarani-alumnos" target="_blank">
+                            <img src="images/siu.png" style="width: 25%; height: auto;">
+                        </a>
+                    </div>
+                </div>
+            </aside>
+		</div>
+
+<footer data-th-replace="~{fragments/footer :: footer}"></footer>
+<script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
