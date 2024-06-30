@@ -1,55 +1,83 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Materia {
 	private String codigo;
     private String nombre;
-    private int curso;
+    private String curso;
     private int cantidadHoras;
     private String modalidad;
-    private Docente docente;
-    private Carrera carrera;
+    private String docenteLegajo;
+    private String carreraCodigo;
     
-	public String getCodigo() {
+    public Materia(String codigo, String nombre, String curso, int cantidadHoras, String modalidad, String docenteLegajo, String carreraCodigo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.curso = curso;
+        this.cantidadHoras = cantidadHoras;
+        this.modalidad = modalidad;
+        this.docenteLegajo = docenteLegajo;
+        this.carreraCodigo = carreraCodigo;
+    }
+    
+    public Materia() {
+    }
+    public String getCodigo() {
 		return codigo;
 	}
+
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCurso() {
+
+	public String getCurso() {
 		return curso;
 	}
-	public void setCurso(int curso) {
+
+	public void setCurso(String curso) {
 		this.curso = curso;
 	}
+
 	public int getCantidadHoras() {
 		return cantidadHoras;
 	}
+
 	public void setCantidadHoras(int cantidadHoras) {
 		this.cantidadHoras = cantidadHoras;
 	}
+
 	public String getModalidad() {
 		return modalidad;
 	}
+
 	public void setModalidad(String modalidad) {
 		this.modalidad = modalidad;
 	}
-	public Docente getDocente() {
-		return docente;
+
+	public String getDocenteLegajo() {
+		return docenteLegajo;
 	}
-	public void setDocente(Docente docente) {
-		this.docente = docente;
+
+	public void setDocenteLegajo(String docenteLegajo) {
+		this.docenteLegajo = docenteLegajo;
 	}
-	public Carrera getCarrera() {
-		return carrera;
+
+	public String getCarreraCodigo() {
+		return carreraCodigo;
 	}
-	public void setCarrera(Carrera carrera) {
-		this.carrera = carrera;
+
+	public void setCarreraCodigo(String carreraCodigo) {
+		this.carreraCodigo = carreraCodigo;
 	}
 
 }
