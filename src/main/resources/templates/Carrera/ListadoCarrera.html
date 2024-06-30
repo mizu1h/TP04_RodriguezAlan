@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <title th:text="${title}">Tp04_RodriguezAlan</title>
+</head>
+<body>
+<header data-th-replace="~{fragments/header :: header}"></header>
+<div class="container">
+  <h1>Listado de las carreras</h1>
+  <br>
+  <a data-th-href="@{/formularioCarrera}" class="btn btn-primary">Agregar Carrera</a>
+  <br>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Años</th>
+          <th>Estado</th>
+          <th>Edicion</th>
+        </tr>
+      </thead>
+      <tbody data-th-each="carrera : ${listadoCarreras}">
+        <tr>
+          <td data-th-text="${carrera.nombre}"></td>
+          <td data-th-text="${carrera.codigo}"></td>
+          <td data-th-text="${carrera.cantidadAnios}"></td>
+          <td data-th-text="${carrera.estado}"></td>
+          <td>
+          	<a data-th-href="@{'/borrarCarrera/'+${carrera.codigo}}" class="btn btn-danger">Borrar</a>
+          	<a data-th-href="@{'/darDeBajaCarrera/'+${carrera.codigo}}" class="btn btn-danger">Dar de baja</a>
+          	<a data-th-href="@{'/darDeAltaCarrera/'+${carrera.codigo}}" class="btn btn-warning">Dar de alta</a>
+          	<a data-th-href="@{'/modificarCarrera/'+${carrera.codigo}}" class="btn btn-warning">Edicion</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<footer data-th-replace="~{fragments/footer :: footer}"></footer>
+<script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

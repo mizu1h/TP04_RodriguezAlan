@@ -1,17 +1,31 @@
 package ar.edu.unju.fi.model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+@Component
 public class Alumno {
 	private String dni;
     private String nombre;
     private String apellido;
     private String email;
     private String telefono;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String domicilio;
     private String LU;
+    public Alumno(String dni, String nombre, String apellido, String email, String telefono, LocalDate fechaNacimiento, String domicilio, String LU) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+        this.fechaNacimiento = fechaNacimiento;
+        this.domicilio = domicilio;
+        this.LU = LU;
+    }
     
+    public Alumno() {
+    }
 	public String getDni() {
 		return dni;
 	}
@@ -42,10 +56,10 @@ public class Alumno {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	public Date getFechaNacimiento() {
+	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	public String getDomicilio() {
@@ -60,5 +74,6 @@ public class Alumno {
 	public void setLU(String lU) {
 		LU = lU;
 	}
+    
     
 }
